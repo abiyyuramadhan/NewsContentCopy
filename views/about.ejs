@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="text-center">About Us</h1>
+        <!-- pharagraph here -->
+        <p class="text-center">
+            <%= about.history %>
+        </p>
+        <div class="row">
+            <div class="col-7">
+                <h3>History:</h3>
+                <!-- phragraph here, ref gojek -->
+                <p>
+                    <%= about.history %>
+                </p>
+            </div>
+            <div class="col col-md">
+                <img src="<%= about.image[1] %> " alt="uhu" class="rounded mx-auto d-block" width="300" height="230">
+            </div>
+            <h3>Our Staff:</h3>
+            <div class="row">
+                <div class="col">
+                    <figure class="figure img-thumbnail">
+                        <img src="<%= about.image[0] %>" class="figure-img img-fluid rounded"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">
+                            <p>
+                                Name: <%= about.name[0] %> <br>
+                                    Job: <%= about.jobType[0] %> <br>
+                                        JobDesc: <%= about.jobDescriptor[0] %> <br>
+                                            From: <%= about.from[0] %>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure class="figure img-thumbnail">
+                        <img src="<%= about.image[1] %>" class="figure-img img-fluid rounded"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">
+                            <p>
+                                Name: <%= about.name[1] %> <br>
+                                    Job: <%= about.jobType[1] %> <br>
+                                        JobDesc: <%= about.jobDescriptor[1] %> <br>
+                                            From: <%= about.from[1] %>
+                            </p>
+                        </figcaption>
+                    </figure>
+
+                </div>
+                <div class="col">
+                    <figure class="figure img-thumbnail">
+                        <img src="<%= about.image[2] %>" class="figure-img img-fluid rounded"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">
+                            <p>
+                                Name: <%= about.name[2] %> <br>
+                                    Job: <%= about.jobType[2] %> <br>
+                                        JobDesc: <%= about.jobDescriptor[2] %> <br>
+                                            From: <%= about.from[2] %>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure class="figure img-thumbnail">
+                        <img src="<%= about.image[3] %>" class="figure-img img-fluid rounded"
+                            alt="A generic square placeholder image with rounded corners in a figure.">
+                        <figcaption class="figure-caption">
+                            <p>
+                                Name: <%= about.name[3] %> <br>
+                                    Job: <%= about.jobType[3] %> <br>
+                                        JobDesc: <%= about.jobDescriptor[3] %> <br>
+                                            From: <%= about.from[3] %>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- staft photo, name,jobtype, jobdescriptor, from,  -->
+            <h3>Office:</h3>
+            <!-- pharagraph address here -->
+            <p>
+                <%= about.office %>
+            </p>
+
+            <h3>Contact us:</h3>
+            <!-- pharagraph contact here -->
+        </div>
+    </div>
+</body>
+
+</html>

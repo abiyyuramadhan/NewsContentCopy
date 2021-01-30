@@ -1,12 +1,13 @@
 const express = require('express')
 const app = express.Router()
 
+//faker
+const { random } = require("faker");
+const faker = require("faker");
 
 app.get('/', (req, res)=>{
-
-    res.render('index')
+    res.render('index', {newsarr : newsarr})
 })
-
 
 
 app.get('/:path', (req, res)=>{
@@ -19,7 +20,158 @@ app.get('/:path', (req, res)=>{
     })
 })
 
+app.get("/newsPage", (req, res) => {
+  res.render("newsPage.ejs", { newsarr: newsarr });
+});
+
+app.get("/about", (req, res) => {
+  res.render("about.ejs", { about: about });
+});
+
+const newsArr = [
+  {
+    title: faker.lorem.sentence(),
+    date: [
+      faker.date.weekday(),
+      faker.random.number({ min: 1, max: 28 }),
+      faker.date.month(),
+      2020,
+    ],
+    image: [
+      faker.image.abstract(),
+      faker.image.abstract(),
+      faker.image.abstract(),
+    ],
+    pharagraph: [
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+    ],
+    name: [
+      faker.name.findName(),
+      faker.name.findName(),
+      faker.name.findName(),
+      faker.name.findName(),
+    ],
+  },
+  {
+    title: faker.lorem.sentences(),
+    date: [
+      faker.date.weekday(),
+      faker.random.number({ min: 1, max: 28 }),
+      faker.date.month(),
+      2020,
+    ],
+    image: [
+      faker.image.abstract(),
+      faker.image.abstract(),
+      faker.image.abstract(),
+    ],
+    pharagraph: [
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+    ],
+    name: [
+      faker.name.findName(),
+      faker.name.findName(),
+      faker.name.findName(),
+      faker.name.findName(),
+    ],
+  },
+  {
+    title: faker.lorem.sentence(),
+    date: [
+      faker.date.weekday(),
+      faker.random.number({ min: 1, max: 28 }),
+      faker.date.month(),
+      2020,
+    ],
+    image: [
+      faker.image.abstract(),
+      faker.image.abstract(),
+      faker.image.abstract(),
+    ],
+    pharagraph: [
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+    ],
+    name: [
+      faker.name.findName(),
+      faker.name.findName(),
+      faker.name.findName(),
+      faker.name.findName(),
+    ],
+  },
+  {
+    title: faker.lorem.sentence(),
+    date: [
+      faker.date.weekday(),
+      faker.random.number({ min: 1, max: 28 }),
+      faker.date.month(),
+      2020,
+    ],
+    image: [
+      faker.image.abstract(),
+      faker.image.abstract(),
+      faker.image.abstract(),
+    ],
+    pharagraph: [
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+      faker.lorem.paragraphs(),
+    ],
+    name: [
+      faker.name.findName(),
+      faker.name.findName(),
+      faker.name.findName(),
+      faker.name.findName(),
+    ],
+  },
+];
+
+const about = {
+  history: faker.lorem.paragraphs(),
+  image: [
+    faker.image.people(),
+    faker.image.business(),
+    faker.image.fashion(),
+    faker.image.nature(),
+  ],
+  name: [
+    faker.name.findName(),
+    faker.name.findName(),
+    faker.name.findName(),
+    faker.name.findName(),
+  ],
+  jobType: [
+    faker.name.jobType(),
+    faker.name.jobType(),
+    faker.name.jobType(),
+    faker.name.jobType(),
+  ],
+  jobDescriptor: [
+    faker.name.jobDescriptor(),
+    faker.name.jobType(),
+    faker.name.jobType(),
+    faker.name.jobType(),
+  ],
+  from: [
+    faker.address.city(),
+    faker.address.city(),
+    faker.address.city(),
+    faker.address.city(),
+  ],
+  office: faker.address.streetAddress(),
+};
 
 
-module.exports = app
+
+
+module.exports = app;
 
