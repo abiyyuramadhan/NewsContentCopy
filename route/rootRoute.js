@@ -4,30 +4,6 @@ const app = express.Router()
 //faker
 const { random } = require("faker");
 const faker = require("faker");
-
-app.get('/', (req, res)=>{
-    res.render('index', {newsarr : newsarr})
-})
-
-
-app.get('/:path', (req, res)=>{
-    res.render(req.params.path, {}, (err, html)=>{
-        if(err){
-            res.render('404')
-        }else{
-            res.send(html)
-        }
-    })
-})
-
-app.get("/newsPage", (req, res) => {
-  res.render("newsPage.ejs", { newsarr: newsarr });
-});
-
-app.get("/about", (req, res) => {
-  res.render("about.ejs", { about: about });
-});
-
 const newsArr = [
   {
     title: faker.lorem.sentence(),
@@ -170,8 +146,28 @@ const about = {
   office: faker.address.streetAddress(),
 };
 
+app.get('/', (req, res)=>{
+    res.render('index', {newsArr : newsArr})
+})
+
+app.get("/newsPage", (req, res) => {
+  res.render("newsPage", { newsArr: newsArr });
+});
+
+app.get("/about", (req, res) => {
+  res.render("about", { about: about });
+});
 
 
+app.get('/:path', (req, res)=>{
+    res.render(req.params.path, {}, (err, html)=>{
+        if(err){
+            res.render('404')
+        }else{
+            res.send(html)
+        }
+    })
+})
 
 module.exports = app;
 
