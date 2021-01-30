@@ -1,1 +1,22 @@
 @import "bootstrap.css";
+
+.container-img {
+  margin: 20px auto;
+  padding: 5px;
+  max-width: 70%;
+  max-height : 20%;
+}
+ .jumbotron {
+    font-size: 20px;
+    padding: 60px;
+    background-color: #5F9EA0;
+    text-align: center;
+    color: whitesmoke;
+ }
+  footer {
+    padding: 20px;
+    color: whitesmoke;
+    background-color: #5F9EA0;
+    text-align: center;
+    font-weight: bold;
+ } 
