@@ -11,139 +11,99 @@
 </head>
 
 <body>
-  <header>
-    <!-- header -->
-    <div class="jumbotron">
-      <h1>Titik<b>.</b>com</h1>
-      <p>Mengabarkan Keindahan Negara Indonesia</p>
-    </div>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar" style="background-color: #fff;">
-      <div class="container">
-        <img src="img/titik.png" alt="" width="30">
-        <a class="navbar-brand" href="/"><b>titik</b>.com</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="newsPage1">Hot News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about">About</a>
-            </li>
-          </ul>
-          <!-- <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form> -->
-        </div>
-      </div>
-    </nav>
-  </header>
+  <%- include('header') %>
 
-  <!-- slide foto -->
-  <div class="container-img">
-    <div class="row align-items-center">
-      <div class="content col-12">
-        <!-- Content here -->
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <a href="newsPage1">
-                <img src="img/1.jpg" class="img-fluid d-block w-100" alt="..." width="50%">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>
-                    <%= newsArr[0].title %>
-                  </h5>
-                  <p>
-                    <%= newsArr[0].date[0] %>, <%= newsArr[0].date[1] %>
-                        <%= newsArr[0].date[2] %>
-                          <%= newsArr[0].date[3] %>
-                  </p>
-                </div>
-              </a>
-            </div>
+    <!-- slide foto -->
+    <div class="container-img">
+      <div class="row align-items-center">
+        <div class="content col-12">
+          <!-- Content here -->
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="newsPage1">
+                  <img src="img/1.jpg" class="img-fluid d-block w-100" alt="..." width="50%">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>
+                      <%= newsArr[0].title %>
+                    </h5>
+                    <p>
+                      <%= newsArr[0].date[0] %>, <%= newsArr[0].date[1] %>
+                          <%= newsArr[0].date[2] %>
+                            <%= newsArr[0].date[3] %>
+                    </p>
+                  </div>
+                </a>
+              </div>
 
-            <div class="carousel-item">
-              <a href="newsPage2">
-                <img src="img/2.jpg" class="img-fluid d-block w-100" alt="..." width="50%">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>
-                    <%= newsArr[1].title %>
-                  </h5>
-                  <p>
-                    <%= newsArr[1].date[0] %>, <%= newsArr[1].date[1] %>
-                        <%= newsArr[1].date[2] %>
-                          <%= newsArr[1].date[3] %>
-                  </p>
-                </div>
-              </a>
+              <div class="carousel-item">
+                <a href="newsPage2">
+                  <img src="img/2.jpg" class="img-fluid d-block w-100" alt="..." width="50%">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>
+                      <%= newsArr[1].title %>
+                    </h5>
+                    <p>
+                      <%= newsArr[1].date[0] %>, <%= newsArr[1].date[1] %>
+                          <%= newsArr[1].date[2] %>
+                            <%= newsArr[1].date[3] %>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="newsPage3">
+                  <img src="img/3.jpg" class="img-fluid d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>
+                      <%= newsArr[2].title %>
+                    </h5>
+                    <p>
+                      <%= newsArr[2].date[0] %>, <%= newsArr[2].date[1] %>
+                          <%= newsArr[2].date[2] %>
+                            <%= newsArr[2].date[3] %>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="newsPage4">
+                  <img src="img/4.jpeg" class="img-fluid d-block w-100" alt="..." width="50%">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>
+                      <%= newsArr[3].title %>
+                    </h5>
+                    <p>
+                      <%= newsArr[3].date[0] %>, <%= newsArr[3].date[1] %>
+                          <%= newsArr[3].date[2] %>
+                            <%= newsArr[3].date[3] %>
+                    </p>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="carousel-item">
-              <a href="newsPage3">
-                <img src="img/3.jpg" class="img-fluid d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>
-                    <%= newsArr[2].title %>
-                  </h5>
-                  <p>
-                    <%= newsArr[2].date[0] %>, <%= newsArr[2].date[1] %>
-                        <%= newsArr[2].date[2] %>
-                          <%= newsArr[2].date[3] %>
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="carousel-item">
-              <a href="newsPage4">
-                <img src="img/4.jpeg" class="img-fluid d-block w-100" alt="..." width="50%">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>
-                    <%= newsArr[3].title %>
-                  </h5>
-                  <p>
-                    <%= newsArr[3].date[0] %>, <%= newsArr[3].date[1] %>
-                        <%= newsArr[3].date[2] %>
-                          <%= newsArr[3].date[3] %>
-                  </p>
-                </div>
-              </a>
-            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </a>
+        </div>
+        <div class="content col-12">
+          <h5><br>Overall visited so far = <%= counter %> times</h5>
         </div>
       </div>
-      <div class="content col-12">
-        <h5><br>Overall visited so far = <%= counter %> times</h5>
-      </div>
     </div>
-  </div>
-  <footer>
-    <p>News Project version 1.0.0 &#169; 2021, By Kelompok 2 Pagi</p>
-  </footer>
-
-
-  <script src="bootstrap.js"></script>
-  <script src="script.js"></script>
+    <%- include('footer') %>
 </body>
 
 </html>

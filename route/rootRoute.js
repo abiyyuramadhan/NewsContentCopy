@@ -152,34 +152,34 @@ let counter = 0
 
 app.get('/', (req, res) => {
   counter++
-  res.render('index', { newsArr: newsArr, counter: counter })
+  res.render('index', { newsArr: newsArr, counter: counter, title: 'Home' })
 })
 
 app.get("/newsPage1", (req, res) => {
-  res.render("newsPage/newsPage1", { newsArr: newsArr });
+  res.render("newsPage/newsPage1", { newsArr: newsArr, title: 'NewsPage1' });
 });
 
 app.get("/newsPage2", (req, res) => {
-  res.render("newsPage/newsPage2", { newsArr: newsArr });
+  res.render("newsPage/newsPage2", { newsArr: newsArr, title: 'NewsPage2' });
 });
 
 app.get("/newsPage3", (req, res) => {
-  res.render("newsPage/newsPage3", { newsArr: newsArr });
+  res.render("newsPage/newsPage3", { newsArr: newsArr, title: 'NewsPage3' });
 });
 
 app.get("/newsPage4", (req, res) => {
-  res.render("newsPage/newsPage4", { newsArr: newsArr });
+  res.render("newsPage/newsPage4", { newsArr: newsArr, title: 'NewsPage4' });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { about: about });
+  res.render("about", { about: about, title: 'About Us' });
 });
 
 
 app.get('/:path', (req, res) => {
   res.render(req.params.path, {}, (err, html) => {
     if (err) {
-      res.render('404')
+      res.render('404', { title: "Not Found" })
     } else {
       res.send(html)
     }
