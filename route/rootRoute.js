@@ -14,8 +14,9 @@ const newsArr = [
       2020,
     ],
     image: [
-      faker.image.abstract(),
-      faker.image.abstract(),
+      faker.image.food(),
+      faker.image.technics(),
+      faker.image.transport(),
       faker.image.abstract(),
     ],
     pharagraph: [
@@ -146,12 +147,24 @@ const about = {
   office: faker.address.streetAddress(),
 };
 
-app.get('/', (req, res)=>{
-    res.render('index', {newsArr : newsArr})
+app.get('/', (req, res) => {
+  res.render('index', { newsArr: newsArr })
 })
 
-app.get("/newsPage", (req, res) => {
-  res.render("newsPage", { newsArr: newsArr });
+app.get("/newsPage1", (req, res) => {
+  res.render("newsPage/newsPage1", { newsArr: newsArr });
+});
+
+app.get("/newsPage2", (req, res) => {
+  res.render("newsPage/newsPage2", { newsArr: newsArr });
+});
+
+app.get("/newsPage3", (req, res) => {
+  res.render("newsPage/newsPage3", { newsArr: newsArr });
+});
+
+app.get("/newsPage4", (req, res) => {
+  res.render("newsPage/newsPage4", { newsArr: newsArr });
 });
 
 app.get("/about", (req, res) => {
@@ -159,14 +172,14 @@ app.get("/about", (req, res) => {
 });
 
 
-app.get('/:path', (req, res)=>{
-    res.render(req.params.path, {}, (err, html)=>{
-        if(err){
-            res.render('404')
-        }else{
-            res.send(html)
-        }
-    })
+app.get('/:path', (req, res) => {
+  res.render(req.params.path, {}, (err, html) => {
+    if (err) {
+      res.render('404')
+    } else {
+      res.send(html)
+    }
+  })
 })
 
 module.exports = app;

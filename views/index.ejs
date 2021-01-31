@@ -47,7 +47,7 @@
       </div>
     </nav>
   </header>
-  
+
   <!-- slide foto -->
   <div class="container-img">
     <div class="row align-items-center">
@@ -61,50 +61,66 @@
             <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
           </ol>
           <div class="carousel-inner">
-            <a href="newsPage">
-              <div class="carousel-item active">
-              <img src="<%= newsArr[0].image[0] %> " class="img-fluid d-block w-100" alt="..." width="50%">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>
-                  <%= newsArr[0].title %>
-                </h5>
-                <p>
-                  <%= newsArr[0].date[0] %>, <%= newsArr[0].date[1] %>
-                      <%= newsArr[0].date[2] %>
-                        <%= newsArr[0].date[3] %>
-                </p>
-              </div>
-            </a>
-            
+            <div class="carousel-item active">
+              <a href="newsPage1">
+                <img src="<%= newsArr[0].image[0] %> " class="img-fluid d-block w-100" alt="..." width="50%">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <%= newsArr[0].title %>
+                  </h5>
+                  <p>
+                    <%= newsArr[0].date[0] %>, <%= newsArr[0].date[1] %>
+                        <%= newsArr[0].date[2] %>
+                          <%= newsArr[0].date[3] %>
+                  </p>
+                </div>
+              </a>
             </div>
-          <a href="newsPage">
+
             <div class="carousel-item">
-              <img src="2.jpg" class="img-fluid d-block w-100" alt="..." width="50%">
-              <div class="carousel-caption d-none d-md-block">
-                <h5><%= newsArr[1].title %></h5>     
-                <p><%= newsArr[1].date[0] %>, <%= newsArr[1].date[1] %>
-                    <%= newsArr[1].date[2] %>
-                      <%= newsArr[1].date[3] %></p>        
-              </div>
-            </div>
-          </a>
-            <div class="carousel-item">
-              <img src="3.jpg" class="img-fluid d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5><%= newsArr[2].title %></h5>
-                <p><%= newsArr[2].date[0] %>, <%= newsArr[2].date[1] %>
-                    <%= newsArr[2].date[2] %>
-                      <%= newsArr[2].date[3] %></p>
-              </div>
+              <a href="newsPage2">
+                <img src="img/2.jpg" class="img-fluid d-block w-100" alt="..." width="50%">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <%= newsArr[1].title %>
+                  </h5>
+                  <p>
+                    <%= newsArr[1].date[0] %>, <%= newsArr[1].date[1] %>
+                        <%= newsArr[1].date[2] %>
+                          <%= newsArr[1].date[3] %>
+                  </p>
+                </div>
+              </a>
             </div>
             <div class="carousel-item">
-              <img src="4.jpeg" class="img-fluid d-block w-100" alt="..." width="50%">
-              <div class="carousel-caption d-none d-md-block">
-                <h5><%= newsArr[3].title %></h5>
-                <p><%= newsArr[3].date[0] %>, <%= newsArr[3].date[1] %>
-                    <%= newsArr[3].date[2] %>
-                      <%= newsArr[3].date[3] %></p>
-              </div>
+              <a href="newsPage3">
+                <img src="img/3.jpg" class="img-fluid d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <%= newsArr[2].title %>
+                  </h5>
+                  <p>
+                    <%= newsArr[2].date[0] %>, <%= newsArr[2].date[1] %>
+                        <%= newsArr[2].date[2] %>
+                          <%= newsArr[2].date[3] %>
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="newsPage4">
+                <img src="img/4.jpeg" class="img-fluid d-block w-100" alt="..." width="50%">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <%= newsArr[3].title %>
+                  </h5>
+                  <p>
+                    <%= newsArr[3].date[0] %>, <%= newsArr[3].date[1] %>
+                        <%= newsArr[3].date[2] %>
+                          <%= newsArr[3].date[3] %>
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">

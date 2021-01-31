@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid my-4">
+
+        <div class="row">
+            <div class="col-8 mx-5">
+                <h1 class="text-center">
+                    <%= newsArr[0].title %>
+                </h1>
+                <p class="top-date text-center mt-4">
+                    <%= newsArr[0].date[0] %>,
+                        <%= newsArr[0].date[1] %>
+                            <%= newsArr[0].date[2] %>
+                                <%= newsArr[0].date[3] %>
+                </p>
+                <img src="<%= newsArr[0].image[0] %>" alt="New Technology"
+                    class="top-image rounded mx-auto d-block mb-5">
+                <p>
+                    <%= newsArr[0].pharagraph[1] %>
+                </p>
+                <p>
+                    <%= newsArr[0].pharagraph[2] %>
+                </p>
+                <p>
+                    <%= newsArr[0].pharagraph[3] %>
+                </p>
+                <p><b>Author : <%= newsArr[0].name[0] %>, <%= newsArr[0].name[1] %></b></p>
+                <p><b>Editor : <%= newsArr[0].name[2] %></b></p>
+                <p><b>Photographer : <%= newsArr[0].name[3] %></b></p>
+            </div>
+            <div class="col my-5 mx-3">
+                <h2>News Update</h2>
+                <ul class="list-unstyled img-thumbnail  mt-4">
+                    <li class="media">
+                        <a href="" class=" d-flex flex-row">
+                            <img class="mr-3 p-2 ml-2" src="<%= newsArr[0].image[0] %>" alt="" width="30%">
+                            <div class="media-body p-1">
+                                <h4 class="mt-0 mb-1">List-based media object</h4>
+                            </div>
+                        </a>
+
+                    </li>
+                    <li class="media my-2">
+                        <a href="" class=" d-flex flex-row">
+                            <img class="mr-3 p-2 ml-2" src="<%= newsArr[0].image[1] %>" alt="" width="30%">
+                            <div class="media-body p-1">
+                                <h4 class="mt-0 mb-1">List-based media object</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="media d-flex flex-row">
+                        <a href="" class=" d-flex flex-row">
+                            <img class="mr-3 p-2 ml-2" src="<%= newsArr[0].image[2] %>" alt="" width="30%">
+                            <div class="media-body p-1">
+                                <h4 class="mt-0 mb-1">List-based media object</h4>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
