@@ -18,13 +18,13 @@
             <p>Mengabarkan Keindahan Negara Indonesia</p>
         </div>
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #fff;">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar" style="background-color: #fff;">
             <div class="container">
                 <img src="img/titik.png" alt="" width="30">
                 <a class="navbar-brand" href="/"><b>titik</b>.com</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -60,8 +60,7 @@
                             <%= newsArr[0].date[2] %>
                                 <%= newsArr[0].date[3] %>
                 </p>
-                <img src="/img/2.jpg" alt="New Technology"
-                    class="top-image rounded mx-auto d-block mb-5" width="100%">
+                <img src="/img/2.jpg" alt="New Technology" class="top-image rounded mx-auto d-block mb-5" width="100%">
                 <p>
                     <%= newsArr[0].pharagraph[1] %>
                 </p>
@@ -79,27 +78,27 @@
                 <h2>News Update</h2>
                 <ul class="list-unstyled img-thumbnail  mt-4">
                     <li class="media">
-                        <a href="" class=" d-flex flex-row">
-                            <img class="mr-3 p-2 ml-2" src="<%= newsArr[0].image[0] %>" alt="" width="30%">
+                        <a href="newsPage1" class=" d-flex flex-row">
+                            <img class="mr-3 p-2 ml-2" src="/img/1.jpg" alt="" width="30%">
                             <div class="media-body p-1">
-                                <h4 class="mt-0 mb-1" id="list-news"><%= newsArr[1].title %></h4>
+                                <h4 class="mt-0 mb-1" id="list-news">Title 1</h4>
                             </div>
                         </a>
 
                     </li>
                     <li class="media my-2">
-                        <a href="" class=" d-flex flex-row">
-                            <img class="mr-3 p-2 ml-2" src="<%= newsArr[0].image[1] %>" alt="" width="30%">
+                        <a href="newsPage3" class=" d-flex flex-row">
+                            <img class="mr-3 p-2 ml-2" src="/img/3.jpg" alt="" width="30%">
                             <div class="media-body p-1">
-                                <h4 class="mt-0 mb-1" id="list-news"><%= newsArr[2].title %></h4>
+                                <h4 class="mt-0 mb-1" id="list-news">Title 3</h4>
                             </div>
                         </a>
                     </li>
                     <li class="media d-flex flex-row">
-                        <a href="" class=" d-flex flex-row">
-                            <img class="mr-3 p-2 ml-2" src="<%= newsArr[0].image[2] %>" alt="" width="30%">
+                        <a href="newsPage4" class=" d-flex flex-row">
+                            <img class="mr-3 p-2 ml-2" src="/img/4.jpeg" alt="" width="30%">
                             <div class="media-body p-1">
-                                <h4 class="mt-0 mb-1" id="list-news"><%= newsArr[3].title %></h4>
+                                <h4 class="mt-0 mb-1" id="list-news">Title 4</h4>
                             </div>
                         </a>
                     </li>
@@ -111,6 +110,7 @@
         <p>News Project version 1.0.0 &#169; 2021, By Kelompok 2 Pagi</p>
     </footer>
     <script src="bootstrap.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
