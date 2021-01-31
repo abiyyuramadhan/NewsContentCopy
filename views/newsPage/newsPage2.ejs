@@ -9,6 +9,42 @@
 </head>
 
 <body>
+<header>
+    <!-- header -->
+    <div class="jumbotron">
+        <h1>Titik<b>.</b>com</h1>
+        <p>Mengabarkan Keindahan Negara Indonesia</p>
+    </div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #5f9ea0;">
+        <div class="container">
+            <img src="titik.png" alt="" width="30">
+            <a class="navbar-brand" href="/"><b>titik</b>.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">About</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+            </div>
+        </div>
+    </nav>
+</header>
     <div class="container-fluid my-4">
 
         <div class="row">
@@ -22,7 +58,7 @@
                             <%= newsArr[0].date[2] %>
                                 <%= newsArr[0].date[3] %>
                 </p>
-                <img src="<%= newsArr[0].image[0] %>" alt="New Technology"
+                <img src="/img/2.jpg" alt="New Technology"
                     class="top-image rounded mx-auto d-block mb-5">
                 <p>
                     <%= newsArr[0].pharagraph[1] %>
@@ -69,6 +105,10 @@
             </div>
         </div>
     </div>
+    <footer>
+        <p>News Project version 1.0.0 &#169; 2021, By Kelompok 2 Pagi</p>
+    </footer>
+    <script src="bootstrap.js"></script>
 </body>
 
 </html>
