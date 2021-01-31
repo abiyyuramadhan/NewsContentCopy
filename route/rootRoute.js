@@ -145,10 +145,14 @@ const about = {
     faker.address.city(),
   ],
   office: faker.address.streetAddress(),
+  phone: faker.phone.phoneNumber(),
 };
 
+let counter = 0
+
 app.get('/', (req, res) => {
-  res.render('index', { newsArr: newsArr })
+  counter++
+  res.render('index', { newsArr: newsArr, counter: counter })
 })
 
 app.get("/newsPage1", (req, res) => {
